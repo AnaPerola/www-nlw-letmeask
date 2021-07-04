@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /usr/src/app/projeto_ana
+WORKDIR /www/nlw/src/app/projeto_ana
 
 COPY package.json ./
 

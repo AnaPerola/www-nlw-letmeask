@@ -7,5 +7,5 @@ services:
     container_name: 'projeto_ana'
     stdin_open: true
     volumes:
-      - ./:/usr/src/app/projeto_ana
-      - /usr/src/app/projeto_ana/node_modules
+      - ./:/www/nlw/src/app/projeto_ana
+      - /www/nlw/src/app/projeto_ana/node_modules
