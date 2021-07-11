@@ -21,7 +21,7 @@ type AuthContextProvider = {
   children: ReactNode;
 }
 
-export function AuthContextProvider(props: AuthContextProvider) {
+export function AuthContexts(props: AuthContextProvider) {
   const [user, setUser] = useState<User>();
 
   useEffect(()=> {
