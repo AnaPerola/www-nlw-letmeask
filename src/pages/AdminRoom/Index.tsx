@@ -1,19 +1,19 @@
 import { useParams , useHistory} from 'react-router-dom';
 
-import logoImg from '../assets/images/logo.svg';
-import deleteImg from '../assets/images/delete.svg';
-import checkImg from '../assets/images/check.svg';
-import answer from '../assets/images/answer.svg';
+import logoImg from '../../assets/images/logo.svg';
+import deleteImg from '../../assets/images/delete.svg';
+import checkImg from '../../assets/images/check.svg';
+import answer from '../../assets/images/answer.svg';
 
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
+import { Button } from '../../components/Button';
+import { Question } from '../../components/Question';
+import { RoomCode } from '../../components/RoomCode';
 //import { useAuth } from '../hooks/useAuth';
 
-import { useRoom } from '../hooks/useRoom';
-import { database } from '../services/firebase';
+import { useRoom } from '../../hooks/useRoom';
+import { database } from '../../services/firebase';
 
-import '../styles/room.scss';
+import '../../styles/room.scss';
 
 type RoomParams = {
   id: string;
@@ -25,7 +25,7 @@ export function AdminRoom(){
   const params = useParams<RoomParams>();
   const roomId = params.id;
 
-  const {title, questions } = useRoom(roomId);
+  const { title, questions } = useRoom(roomId);
 
   async function handleEndRoom(){
     await database.ref(`rooms/${roomId}`).update({
